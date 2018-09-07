@@ -25,4 +25,4 @@ echo $CODE_DIR
 
 REPO=${GROUP}/$(basename front-end);
 
-$DOCKER_CMD build -t ${REPO}:${COMMIT} .
+$DOCKER_CMD build -t registry.cloudmule.xyz/${REPO}:${COMMIT} .

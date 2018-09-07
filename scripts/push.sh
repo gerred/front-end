@@ -33,9 +33,9 @@ tag_and_push_all() {
     fi
     DOCKER_REPO=${GROUP}/${REPO}
     if [[ "$COMMIT" != "$TAG" ]]; then
-        docker tag ${DOCKER_REPO}:${COMMIT} ${DOCKER_REPO}:${TAG}
+        docker tag registry.cloudmule.xyz/${DOCKER_REPO}:${COMMIT} registry.cloudmule.xyz/${DOCKER_REPO}:${TAG}
     fi
-    push "$DOCKER_REPO:$TAG";
+    push registry.cloudmule.xyz/"$DOCKER_REPO:$TAG";
 }
 
 # Push snapshot when in master
